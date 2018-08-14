@@ -1,1 +1,9 @@
-<p>It works</p>
+{{#each burgers}}
+<p>{{burger_name}}</p>
+{{/each}}
+<br>
+<form action="/action_page.php">
+  <input type="text" value="New Burger">
+  <br><br>
+  <input type="submit" value="Submit">
+</form>
