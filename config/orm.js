@@ -1,13 +1,6 @@
 var connection = require("../config/connection.js");
 
-// Connect to MySQL database
-connection.connect(function(err) {
-    if (err) {
-      console.error('error connecting: ' + err.stack);
-      return;
-    };
-    console.log('connected as id ' + connection.threadId);
-  });
+
   
   
   
@@ -22,6 +15,7 @@ connection.connect(function(err) {
       connection.query('SELECT * FROM burgers', function (err, result) {
         if (err) throw err;
         callback(result);
+        console.log(result)
       });
   
     },

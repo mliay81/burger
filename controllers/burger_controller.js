@@ -6,16 +6,21 @@ var router = express.Router()
 // Create routes
 // ----------------------------------------------------
 // Index Redirect
-router.get('/', function (req, res) {
-    res.redirect('/index');
-  });
+
+
+
+// router.get("/", function (req, res) {
+//   console.log("home path: " + res)
+//     res.render("index");
+//   });
   
   
   // Index Page (render all burgers to DOM)
-  router.get('/index', function (req, res) {
+  router.get("index", function (req, res) {
+    
     burger.selectAll(function(data) {
       var hbsObject = { burgers: data };
-      //console.log(hbsObject);
+      console.log(hbsObject);
       res.render('index', hbsObject);
     });
   });
